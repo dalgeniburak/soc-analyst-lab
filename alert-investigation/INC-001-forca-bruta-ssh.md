@@ -1,10 +1,10 @@
 INC-001 - Ataque de Força Bruta SSH
-Data: 14 de junho de 2026  
-Analista: Dalgeni Burak  
+Data: 14 de junho de 2026
+Analista: Dalgeni Burak
 Status: Resolvido
 ---
 1. Sumário
-No dia 14/06/2026 o SIEM Wazuh começou a exibir alertas de uma possível tentativa de ataque de força bruta, por volta das 18:12 com duração até 18:16 aproximadamente. Foram várias tentativas de login indevido partindo do mesmo IP de origem, uma máquina Windows 192.168.100.113. Investigando mais detalhadamente os alertas, constatou-se que se tratava de um verdadeiro positivo.
+No dia 14/06/2026 o SIEM Wazuh começou a exibir alertas de uma possível tentativa de ataque de força bruta, por volta das 18:12 com duração até 18:16 aproximadamente. Foram várias tentativas de login indevido partindo do mesmo IP de origem, uma máquina windows 192.168.100.113. Investigando mais detalhadamente os alertas, constatou-se que se tratava de um verdadeiro positivo.
 ---
 2. Dados do Alerta
 Campo	Valor
@@ -38,4 +38,8 @@ Foi verificado via journalctl que não houve nenhum login bem sucedido ao sistem
 ---
 6. Conclusão
 O ataque de técnica T1110 - Brute Force foi identificado e contido. O sistema encontra-se limpo, o IP atacante 192.168.100.113 foi bloqueado no UFW e nenhuma evidência de comprometimento do sistema foi encontrada.
-Recomendações: desabilitar o login root via SSH, reiniciar o serviço SSH, instalar e configurar o Fail2Ban e trocar o número da porta padrão 22/TCP.
+Recomendações:
+Desabilitar o login root via SSH
+Reiniciar o serviço SSH
+Instalar e configurar o Fail2Ban
+Trocar o número da porta padrão 22/TCP
