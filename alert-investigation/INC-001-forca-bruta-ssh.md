@@ -1,10 +1,10 @@
-**INC-001 - Ataque de Força Bruta SSH**  
+## INC-001 - Ataque de Força Bruta SSH 
 
-**Data: 14 de junho de 2026** 
+**Data:** 14 de junho de 2026
 
-**Analista: Dalgeni Burak** 
+**Analista:** Dalgeni Burak 
 
-**Status: Resolvido**  
+**Status:** Resolvido 
 
 # 1. Sumário 
 
