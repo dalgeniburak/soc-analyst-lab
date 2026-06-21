@@ -54,7 +54,7 @@ grep “atacante2026” /etc/passwd
 
 /home/atacante2026: /bin/bash
 
-**Conclusão da investigação**  
+### Conclusão da investigação 
 
 Após a verificação foi definido que o atacante entrou na rede via ssh com privilégios root e criou uma conta com shell /bin/bash, para conseguir login interativo.
 
@@ -68,19 +68,24 @@ sudo grep “atacante2026” /etc/shadow | cut -d: -f2
 
 ## 5. Erradicação
 
-#Usuário removido totalmente do sistema
-sudo userdel -r atacante2026
+#Usuário removido totalmente do sistema  
 
-#Confirmação de exclusão de usuário
+sudo userdel -r atacante2026  
+
+#Confirmação de exclusão de usuário  
+
 grep “atacante2026” /etc/passwd
 
-#Verificar se o diretório home foi removido
+#Verificar se o diretório home foi removido  
+
 ls /home/atacante2026
 
-#Verificar se ainda existe no shadow
+#Verificar se ainda existe no shadow  
+
 grep "atacante2026" /etc/shadow
 
-#Confirmar que nunca logou
+#Confirmar que nunca logou  
+
 last | grep "atacante2026"
 
 ## 6. Conclusão
