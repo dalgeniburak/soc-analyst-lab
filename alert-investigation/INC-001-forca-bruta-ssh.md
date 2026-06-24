@@ -13,8 +13,6 @@ No dia 14/06/2026 o SIEM Wazuh começou a exibir alertas de uma possível tentat
 
 # 2. Dados do Alerta
 
-
-Campo e Valor:  
 rule.id Valor:	2502  
 rule.level: 10  
 rule.mitre.id:	T1110  
