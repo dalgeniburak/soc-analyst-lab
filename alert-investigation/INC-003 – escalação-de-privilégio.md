@@ -47,7 +47,7 @@ Para contenção rápida utilizei o **usermod -L operador** para bloquear a cont
 
 ## 5. Erradicação  
 
-Realizada a remoção do arquivo **/etc/sudoers.d/operador** com permissão do sudoers e feita uma verificação com **grep -r "NOPASSWD" /etc/sudoers **, que não retornou nenhuma entrada NOPASSWD o que confirmou que não havia outras configurações vulneráveis. Após isso o usuário foi removido completamente do sistema **userdel -r operador**
+Realizada a remoção do arquivo **/etc/sudoers.d/operador** com permissão do sudoers e feita uma verificação com **grep -r "NOPASSWD" /etc/sudoers**, que não retornou nenhuma entrada NOPASSWD o que confirmou que não havia outras configurações vulneráveis. Após isso o usuário foi removido completamente do sistema **userdel -r operador**
 
 
 ## 6. Conclusão  
