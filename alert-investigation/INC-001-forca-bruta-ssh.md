@@ -28,8 +28,6 @@ Timestamp	Jun 14: 2026 @ 18:15:30.093.
 
 Evidências coletadas nos logs  
 
-Campo e	Valor:  
-
 Total de tentativas:	132  
 
 Usuários inválidos testados:	96  
