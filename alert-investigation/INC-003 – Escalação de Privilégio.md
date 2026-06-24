@@ -1,6 +1,8 @@
 # INC-003 – Escalação de Privilégio
-**Data:** 22 de junho de 2026
-**Analista:** Dalgeni Burak
+**Data:** 22 de junho de 2026  
+
+**Analista:** Dalgeni Burak  
+
 **Status:** Resolvido
 
 ## 1. Sumário  
@@ -36,7 +38,7 @@ Timestamp: Jun 22, 2026 @ 19:53:44.796
 
 ## 3. Investigação  
 
-Após uma consulta no log **/var/log/auth.log** para buscar eventos do usuário, identifiquei que o host não tinha o rsyslog instalado, o que estava deixando o wazuh sem visibilidade dos logs de autenticação. Após fazer a instalação do rsyslog fiz a descoberta da grave falha de configuração, (ALL) NOPASSWD: /usr/bin/find. Verificando na interface do SIEM wazuh constatei que ele estava registrando com  o evento com severidade inadequada **rule.level: 3** o que é insuficiente para falha, deveria ter feito a correlação entre o uso do parâmetro -exec do find. Isso mascarou a falha, o que faz com que esse tipo de ataque seja muito difícil de detectar.
+Após uma consulta no log **/var/log/auth.log** para buscar eventos do usuário, identifiquei que o host não tinha o rsyslog instalado, o que estava deixando o wazuh sem visibilidade dos logs de autenticação. Após fazer a instalação do rsyslog fiz a descoberta da grave falha de configuração **(ALL) NOPASSWD: /usr/bin/find**. Verificando na interface do SIEM wazuh constatei que ele estava registrando com  o evento com severidade inadequada **rule.level: 3** o que é insuficiente para falha, deveria ter feito a correlação entre o uso do parâmetro -exec do find. Isso mascarou a falha, o que faz com que esse tipo de ataque seja muito difícil de detectar.
 
 ## 4. Contenção  
 
