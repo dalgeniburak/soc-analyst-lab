@@ -8,9 +8,11 @@ seguindo o framework NIST SP 800-61.
 
 | Host | Sistema | IP | Função |
 |------|---------|-----|--------|
-| wazuh-server | Ubuntu | 192.168.100.111 | Wazuh SIEM Server |
-| vm-debian-lab | Debian 13 | 192.168.100.114 | Agente Linux |
-| vm-lab-win | Windows 10 Pro | 192.168.100.113 | Agente Windows |
+| Proxmox-server | Debian | 192.168.100.200 | Hypervisor Server |
+| wazuh-server | Ubuntu | 192.168.100.201 | Wazuh SIEM Server |
+| vm-lab-win | Windows 10 Pro | 192.168.100.202 | Agente Windows |
+| vm-kali-lab | Kali Linux | 192.168.100.203 | Agente Linux |
+| vm-debian-lab | Debian 13 | 192.168.100.204 | Agente Linux |
 
 ## Casos Investigados
 
@@ -19,6 +21,8 @@ seguindo o framework NIST SP 800-61.
 | INC-001 | Força Bruta SSH | T1110.001 | [Ver relatório](alert-investigation/INC-001-forca-bruta-ssh.md) |
 | INC-002 | Persistência via Usuário Backdoor | T1136.001 | [Ver relatório](alert-investigation/INC-002-file-integrity-monitoring.md) |
 | INC-003 | Escalação de Privilégio via Sudo Misconfiguration | T1548.003 | [Ver relatório](alert-investigation/INC-003%20–%20escalação-de-privilégio.md) |
+| INC-004 | Avaliação de Vulnerabilidades Via OpenVAS/GVM | CIS Benchmark | [Ver relatório](alert-investigation/INC-004-vulnerability-scan.md) |
+
 
 ## Ferramentas Utilizadas
 
@@ -27,6 +31,7 @@ seguindo o framework NIST SP 800-61.
 - journalctl, auth.log, GTFOBins
 - MITRE ATT&CK Framework
 - NIST SP 800-61 (resposta a incidentes)
+- OpenVAS/GVM (scanner de falhas de segurança)
 
 ## Sobre a Analista
 
