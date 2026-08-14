@@ -33,10 +33,4 @@ seguindo o framework NIST SP 800-61.
 - NIST SP 800-61 (resposta a incidentes)
 - OpenVAS/GVM (scanner de falhas de segurança)
 
-## Sobre a Analista
 
-Dalgeni Burak — Assistente de TI em transição para cibersegurança,
-com foco em SOC Analyst e futuramente perícia digital forense.
-Certificações: IBSEC SOC Analyst (IC-SOC-383), IBSEC Linux Security
-(IC-LNX-1183), Linux Foundation Cybersecurity Essentials (LFC108),
-Google Cybersecurity Certificate (em andamento).
