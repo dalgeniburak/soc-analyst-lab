@@ -1,0 +1,17 @@
+<!--
+  INC-002: decoder customizado para linhas do usermod no formato
+  "add 'USUARIO' to group 'GRUPO'".
+  Instalar em: Server management > Decoders > local_decoder.xml
+  Extrai: dstuser (quem foi adicionado) e target_group (qual grupo).
+-->
+
+<decoder name="usermod-custom">
+  <program_name>^usermod</program_name>
+</decoder>
+
+<decoder name="usermod-custom">
+  <parent>usermod-custom</parent>
+  <prematch>^add '\S+' to group</prematch>
+  <regex>^add '(\S+)' to group '(\S+)'</regex>
+  <order>dstuser,target_group</order>
+</decoder>

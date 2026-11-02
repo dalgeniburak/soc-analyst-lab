@@ -1,0 +1,18 @@
+<!--
+  INC-002: alerta quando um usuário é adicionado a um grupo privilegiado.
+  Instalar em: Server management > Rules > local_rules.xml (no final do arquivo).
+  Depende do decoder "usermod-custom".
+  Para cobrir outros grupos privilegiados, altere apenas a regex do campo
+  target_group (por exemplo: ^(sudo|adm|wheel|docker)$). O decoder não muda.
+-->
+
+<group name="local,syslog,privilege_escalation,">
+  <rule id="100100" level="12">
+    <decoded_as>usermod-custom</decoded_as>
+    <field name="target_group" type="pcre2">^(sudo|adm|wheel)$</field>
+    <description>User $(dstuser) added to privileged group $(target_group)</description>
+    <mitre>
+      <id>T1098</id>
+    </mitre>
+  </rule>
+</group>
