@@ -131,3 +131,5 @@ A regra avalia o campo `target_group`. Se for `sudo`, `adm` ou `wheel`, gera ale
 ## Apêndice — arquivos de detecção
 
 Ver `usermod-custom-decoder.xml` e `rule-100100-privileged-group.xml` neste diretório.
+
+Observação: na VM do laboratório o pacote sudo não estava instalado, portanto a inclusão no grupo sudo não concedia privilégio efetivo. A detecção continua válida, pois em sistemas reais o sudo está presente e essa ação resulta em escalada de privilégio.
